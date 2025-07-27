@@ -1,0 +1,13 @@
+<div class="bg-dark p-2" id="sidebar">
+  <h3 class="text-white">Aplicación de gifs</h3>
+  <hr class="text-white" />
+  <div class="list-group">
+    <button
+      class="list-group-item list-group-item-action text-center"
+      *ngFor="let search of searchs"
+    >
+      {{search | titlecase }}
+    </button>
+  </div>
+</div>
+
