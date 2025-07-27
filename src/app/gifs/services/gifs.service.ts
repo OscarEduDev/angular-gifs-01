@@ -16,7 +16,8 @@ export class GifsService {
   public addSearch(searchTerm: string): void {
     if (searchTerm.length === 0) return;
     this.organizeHistory(searchTerm);
-
+    this.http.get(`http://api.giphy.com/v1/gifs/search?api_key=ttp2Ak1AjbLjO8A0KIVazeT4jtEjj6i9&q=asdf`)
+      .subscribe(console.log)
   }
 
   private organizeHistory(searchTerm: string): void {

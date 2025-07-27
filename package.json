@@ -6,7 +6,11 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "build:base-href": "ng build --base-href ./",
+    "del:docs": "del docs",
+    "copy:docs": "copyfiles -f ./dist/angular-gifs-01/browser/* ./docs",
+    "build:ghpages": "npm run del:docs && npm run build:base-href && npm run copy:docs"
   },
   "private": true,
   "dependencies": {
@@ -18,6 +22,8 @@
     "@angular/platform-browser": "^17.3.0",
     "@angular/platform-browser-dynamic": "^17.3.0",
     "@angular/router": "^17.3.0",
+    "copyfiles": "^2.4.1",
+    "del-cli": "^6.0.0",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.14.3"
