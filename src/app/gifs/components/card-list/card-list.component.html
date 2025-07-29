@@ -1,9 +1,9 @@
 <div class="row mt-2">
-  <div class="col-sm-6 col-md-3">
+  <div *ngFor="let gif of gifs" class="col-sm-6 col-md-3">
     <div class="card text-center">
-
+      <img [src]="gif.images.downsized.url" [alt]="gif.alt_text" />
       <div class="card-body text-center">
-        Messi
+        {{gif.title}}
       </div>
     </div>
   </div>

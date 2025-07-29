@@ -13,4 +13,8 @@ export class SidebarComponent {
   public get searchs(): string[] {
     return this.gifsService.searchs;
   }
+
+  public searchGifs(search: string): void {
+    this.gifsService.addSearch(search);
+  }
 }

@@ -5,6 +5,7 @@
     <button
       class="list-group-item list-group-item-action text-center"
       *ngFor="let search of searchs"
+      (click)="searchGifs(search)"
     >
       {{search | titlecase }}
     </button>
