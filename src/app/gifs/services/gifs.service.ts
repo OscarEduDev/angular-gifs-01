@@ -9,7 +9,7 @@ import { Gif, SearchResponse } from '../interfaces/gifs.interfaces';
 export class GifsService {
   private _searchs: string[] = [];
   private giphyUrl: string = 'https://api.giphy.com/v1/gifs';
-  private apiKey: string = 'ttp2Ak1AjbLjO8A0KIVazeT4jtEjj6i9';
+  private apiKey: string = 'zE4bVrOj7Om4aG8PCvawLHt03WwgKBkq';
   public gifs: Gif[] = [];
 
   constructor(private http: HttpClient) {
